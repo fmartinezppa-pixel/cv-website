@@ -207,11 +207,17 @@ nav.nav-links a.active{
   nav.nav-links a{ padding:14px 10px; text-align:center; border-bottom:1px solid var(--border-faint); }
   .menu-toggle{ display:flex; }
 
-  /* Header on phones: let brand and actions wrap onto their own rows
-     instead of overflowing the viewport. Desktop layout is untouched. */
+  /* Header on phones: brand + hamburger stay on row 1 (menu-toggle is
+     pulled out of .nav-actions via order), lang/CV/logout form row 2 on
+     their own — full width, no fighting for space with the hamburger.
+     Desktop layout (nav-wrap default, menu-toggle display:none) is untouched. */
   .nav-inner{ flex-wrap:wrap; row-gap:10px; padding:14px 16px; }
-  .nav-actions{ width:100%; justify-content:flex-end; flex-wrap:wrap; }
-  .cv-download{ padding:9px 12px; font-size:.68rem; }
+  .brand{ order:1; }
+  .menu-toggle{ order:2; }
+  .nav-actions{ order:3; width:100%; justify-content:flex-end; flex-wrap:nowrap; }
+  .cv-download{ padding:9px 12px; font-size:.68rem; white-space:nowrap; }
+  .lang-toggle{ flex-shrink:0; }
+  .logout-btn{ flex-shrink:0; white-space:nowrap; }
   .brand .plane-icon{ font-size:1.9rem; }
 }
 
@@ -220,8 +226,10 @@ nav.nav-links a.active{
   cursor:pointer;
   background:none;
   font-family:'Archivo',sans-serif;
-  margin-top:0;
 }
+/* Higher specificity than .btn-sm's margin-top:14px (meant for cards),
+   so the button sits vertically centered in the nav row like its siblings. */
+.nav-actions .logout-btn{ margin-top:0; }
 .logout-btn:hover{ border-color:var(--blue); color:var(--white); background:rgba(52,82,255,0.08); }
 
 /* ---------------- PHONE FINE-TUNING (iPhone Pro / Pro Max and similar) ----------------
