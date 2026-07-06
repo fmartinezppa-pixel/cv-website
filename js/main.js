@@ -59,6 +59,17 @@
     });
   }
 
+  function initLogout() {
+    document.querySelectorAll(".logout-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        try {
+          localStorage.removeItem("fm_cv_unlocked_v1");
+        } catch (e) {}
+        window.location.href = "index.html";
+      });
+    });
+  }
+
   function initMobileMenu() {
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav.nav-links");
@@ -190,6 +201,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     initLangToggle();
     markActiveNav();
+    initLogout();
     initMobileMenu();
     initReveal();
     initPdfPreviews();

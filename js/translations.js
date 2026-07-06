@@ -12,6 +12,7 @@ const translations = {
     "nav.logros": "Logros",
     "nav.contacto": "Contacto",
     "nav.cv": "Descargar CV",
+    "nav.logout": "Salir",
     "brand.name": "Franco Martinez",
     "brand.tag": "Piloto Comercial de Avión",
 
@@ -256,6 +257,7 @@ const translations = {
     "nav.logros": "Achievements",
     "nav.contacto": "Contact",
     "nav.cv": "Download CV",
+    "nav.logout": "Log out",
     "brand.name": "Franco Martinez",
     "brand.tag": "Commercial Pilot",
 
