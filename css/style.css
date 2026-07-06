@@ -206,6 +206,36 @@ nav.nav-links a.active{
   nav.nav-links.open{ transform:translateY(0); }
   nav.nav-links a{ padding:14px 10px; text-align:center; border-bottom:1px solid var(--border-faint); }
   .menu-toggle{ display:flex; }
+
+  /* Header on phones: let brand and actions wrap onto their own rows
+     instead of overflowing the viewport. Desktop layout is untouched. */
+  .nav-inner{ flex-wrap:wrap; row-gap:10px; padding:14px 16px; }
+  .nav-actions{ width:100%; justify-content:flex-end; flex-wrap:wrap; }
+  .cv-download{ padding:9px 12px; font-size:.68rem; }
+  .brand .plane-icon{ font-size:1.9rem; }
+}
+
+/* ---------------- LOGOUT BUTTON ---------------- */
+.logout-btn{
+  cursor:pointer;
+  background:none;
+  font-family:'Archivo',sans-serif;
+  margin-top:0;
+}
+.logout-btn:hover{ border-color:var(--blue); color:var(--white); background:rgba(52,82,255,0.08); }
+
+/* ---------------- PHONE FINE-TUNING (iPhone Pro / Pro Max and similar) ----------------
+   Restores the horizontal breathing room that .page-hero / .hero / section.section
+   cancel out (their padding shorthand zeroes the left/right inherited from .container).
+   On desktop this is invisible because of the large auto-margins, so scoping the
+   fix to the existing mobile breakpoint leaves desktop pixel-for-pixel the same. */
+@media (max-width:880px){
+  .page-hero.container,
+  .hero.container,
+  section.section.container{
+    padding-left:20px;
+    padding-right:20px;
+  }
 }
 
 /* ---------------- HERO / PAGE HEADER ---------------- */
