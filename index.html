@@ -3,110 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Franco Martinez | Piloto Comercial de Avión</title>
-<meta name="description" content="CV interactivo de Franco Martinez, alumno piloto comercial de avión.">
+<meta name="robots" content="noindex, nofollow">
+<title>Acceso | Franco Martinez</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .gate-wrap{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+  .gate-card{ width:100%; max-width:380px; background:var(--black-card); border:1px solid var(--border-soft); border-radius:var(--radius); padding:44px 32px; text-align:center; }
+  .gate-icon{ font-size:2rem; display:inline-block; margin-bottom:18px; color:var(--blue); transform:rotate(45deg); }
+  .gate-card h1{ font-size:1.25rem; margin:0 0 10px; letter-spacing:.02em; font-weight:600; }
+  .gate-card p{ color:var(--gray-300); font-size:.88rem; margin:0 0 28px; line-height:1.6; }
+  .gate-form{ display:flex; flex-direction:column; gap:14px; }
+  .gate-input{ width:100%; background:var(--black); border:1px solid var(--border-soft); color:var(--white); font-family:'Archivo',sans-serif; font-size:1rem; letter-spacing:.35em; text-align:center; padding:14px 12px; border-radius:var(--radius); outline:none; transition:border-color .2s; }
+  .gate-input:focus{ border-color:var(--blue); }
+  .gate-error{ color:#ff5b5b; font-size:.82rem; min-height:1.2em; display:none; }
+  .gate-error.show{ display:block; }
+  .gate-btn{ width:100%; justify-content:center; cursor:pointer; }
+</style>
 </head>
-<body data-page="inicio">
+<body>
 
-<header class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="plane-icon">&#9992;</span>
-      <span>
-        <span data-i18n="brand.name">Franco Martinez</span><br>
-        <small data-i18n="brand.tag">Piloto Comercial de Avión</small>
-      </span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html" data-page="inicio" data-i18n="nav.inicio">Inicio</a>
-      <a href="estudios.html" data-page="estudios" data-i18n="nav.estudios">Estudios</a>
-      <a href="licencias.html" data-page="licencias" data-i18n="nav.licencias">Licencias</a>
-      <a href="horas-vuelo.html" data-page="horas" data-i18n="nav.horas">Horas de Vuelo</a>
-      <a href="experiencia.html" data-page="experiencia" data-i18n="nav.experiencia">Experiencia</a>
-      <a href="logros.html" data-page="logros" data-i18n="nav.logros">Logros</a>
-      <a href="contacto.html" data-page="contacto" data-i18n="nav.contacto">Contacto</a>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-toggle">
-        <button data-lang="es">ES</button>
-        <button data-lang="en">EN</button>
-      </div>
-      <a class="cv-download" href="assets/CV-Franco-Martinez-ES.pdf" data-href-es="assets/CV-Franco-Martinez-ES.pdf" data-href-en="assets/CV-Franco-Martinez-EN.pdf" download data-i18n="nav.cv">Descargar CV</a>
-      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
-    </div>
+<div class="gate-wrap">
+  <div class="gate-card">
+    <span class="gate-icon">&#9992;</span>
+    <h1>Franco Martinez</h1>
+    <p>Este sitio contiene información personal. Ingresá el código de acceso para continuar.</p>
+    <form class="gate-form" id="gateForm" autocomplete="off">
+      <input class="gate-input" id="gateInput" type="password" inputmode="numeric" placeholder="Código de acceso" required>
+      <button class="btn btn-primary gate-btn" type="submit">Ingresar</button>
+      <div class="gate-error" id="gateError">Código incorrecto. Probá de nuevo.</div>
+    </form>
   </div>
-</header>
+</div>
 
-<main>
-  <section class="hero container">
-    <div class="hero-text reveal">
-      <div class="eyebrow" data-i18n="home.eyebrow">Portfolio de Vuelo</div>
-      <h1 data-i18n="home.h1">Franco Martinez</h1>
-      <div class="titles">
-        <span data-i18n="home.title0">Flight Dispatcher — Aerowise</span>
-        <span data-i18n="home.title1">Piloto Comercial de Avión</span>
-        <span data-i18n="home.title2">Piloto Privado de Avión</span>
-        <span data-i18n="home.title3">Piloto de Planeador</span>
-      </div>
-      <p class="lead" data-i18n="home.lead">Tengo 19 años, vivo en Buenos Aires, Argentina, y soy Piloto Comercial de Avión. Combino la pasión por volar con experiencia en liderazgo, idiomas y proyectos propios.</p>
-      <div class="hero-cta">
-        <a href="licencias.html" class="btn btn-primary" data-i18n="home.cta.licencias">Ver licencias</a>
-        <a href="contacto.html" class="btn btn-outline" data-i18n="home.cta.contacto">Contactarme</a>
-      </div>
-    </div>
-    <div class="hero-photo reveal">
-      <img src="assets/franco-foto.jpg" alt="Franco Martinez">
-    </div>
-  </section>
-
-  <section class="container">
-    <div class="stat-strip reveal">
-      <div class="stat"><b data-i18n="home.stat1.n">19</b><span data-i18n="home.stat1.l">Años</span></div>
-      <div class="stat"><b data-i18n="home.stat2.n">9</b><span data-i18n="home.stat2.l">Licencias / Habilitaciones</span></div>
-      <div class="stat"><b data-i18n="home.stat3.n">9</b><span data-i18n="home.stat3.l">Aeronaves habilitadas</span></div>
-      <div class="stat"><b data-i18n="home.stat4.n">4</b><span data-i18n="home.stat4.l">Idiomas</span></div>
-    </div>
-  </section>
-
-  <section class="section container">
-    <div class="grid-2">
-      <div class="reveal">
-        <div class="section-title">
-          <span class="tag" data-i18n="home.about.tag">Sobre mí</span>
-        </div>
-        <h2 data-i18n="home.about.title">Perfil</h2>
-        <p class="lead" data-i18n="home.about.text">Piloto Comercial de Avión...</p>
-      </div>
-      <div class="reveal">
-        <div class="section-title">
-          <h2 style="font-size:1.3rem" data-i18n="home.skills.title">Fortalezas</h2>
-        </div>
-        <div class="pill-row">
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill1">Toma de decisiones bajo presión</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill2">Atención al detalle</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill3">Pensamiento analítico</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill4">Gestión del tiempo</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill5">Comunicación efectiva</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill6">Trabajo en equipo</span></span>
-          <span class="pill"><span class="dot"></span><span data-i18n="home.skill7">Adaptabilidad</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <span data-i18n="footer.text">Franco Martinez — Piloto Comercial de Avión</span>
-    <span class="plane-icon">&#9992;</span>
-    <span data-i18n="footer.rights">Todos los derechos reservados.</span>
-  </div>
-</footer>
-
-<script src="js/translations.js"></script>
-<script src="js/main.js"></script>
+<script src="js/gate.js"></script>
 </body>
 </html>
